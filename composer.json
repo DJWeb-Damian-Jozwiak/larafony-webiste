@@ -25,14 +25,5 @@
         "allow-plugins": {
             "dealerdirect/phpcodesniffer-composer-installer": true
         }
-    },
-    "repositories": {
-        "local": {
-            "type": "path",
-            "url": "../framework",
-            "options": {
-                "symlink": true
-            }
-        }
     }
 }
