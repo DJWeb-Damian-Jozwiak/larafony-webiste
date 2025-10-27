@@ -317,11 +317,6 @@ $note = Note::query()->find(1);
 $note->title = 'Updated Title';
 $note->save();</code></pre>
 
-    <div class="alert-docs alert-success">
-        <i class="bi bi-lightbulb-fill me-2"></i>
-        <strong>Tip:</strong> Only properties listed in <code>$fillable</code> can be mass-assigned via <code>fill()</code>.
-        This protects against mass-assignment vulnerabilities.
-    </div>
 
     <h2>Next Steps</h2>
     <ul>

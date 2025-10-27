@@ -117,6 +117,21 @@
             color: var(--text-muted);
             margin-bottom: 0.75rem;
             letter-spacing: 0.05em;
+            transition: color 0.2s;
+        }
+
+        .docs-sidebar .nav-section-title:hover {
+            color: var(--primary-color);
+        }
+
+        .docs-sidebar .collapse-icon {
+            font-size: 0.7rem;
+            transition: transform 0.3s ease;
+            display: inline-block;
+        }
+
+        .docs-sidebar .nav-section-title:not(.collapsed) .collapse-icon {
+            transform: rotate(90deg);
         }
 
         .docs-sidebar .nav-link {
@@ -185,12 +200,13 @@
         }
 
         .docs-content code:not([class*="language-"]) {
-            background: rgba(99, 102, 241, 0.15);
-            color: var(--primary-color);
+            background: rgba(251, 146, 60, 0.15);
+            color: #fb923c;
             padding: 0.2rem 0.4rem;
             border-radius: 0.25rem;
             font-size: 0.9em;
             font-family: 'Courier New', monospace;
+            font-weight: 500;
         }
 
         /* Prism.js overrides */
@@ -233,6 +249,12 @@
         .alert-docs.alert-warning {
             background: rgba(251, 191, 36, 0.15);
             border-color: #fbbf24;
+            color: #cbd5e1;
+        }
+
+        .alert-docs.alert-danger {
+            background: rgba(239, 68, 68, 0.15);
+            border-color: #ef4444;
             color: #cbd5e1;
         }
 
@@ -316,36 +338,93 @@
     <aside class="docs-sidebar">
         <nav>
             <div class="nav-section">
-                <div class="nav-section-title">Getting Started</div>
-                <a href="/docs" class="nav-link">
-                    <i class="bi bi-book me-2"></i>Introduction
-                </a>
-                <a href="/docs/structure" class="nav-link">
-                    <i class="bi bi-folder me-2"></i>Project Structure
-                </a>
+                <div class="nav-section-title" data-bs-toggle="collapse" data-bs-target="#nav-getting-started" style="cursor: pointer;">
+                    <i class="bi bi-chevron-right me-1 collapse-icon"></i>Getting Started
+                </div>
+                <div id="nav-getting-started" class="collapse">
+                    <a href="/docs" class="nav-link">
+                        <i class="bi bi-book me-2"></i>Introduction
+                    </a>
+                    <a href="/docs/structure" class="nav-link">
+                        <i class="bi bi-folder me-2"></i>Project Structure
+                    </a>
+                    <a href="/docs/bootstrap" class="nav-link">
+                        <i class="bi bi-gear me-2"></i>Application Bootstrap
+                    </a>
+                </div>
             </div>
 
             <div class="nav-section">
-                <div class="nav-section-title">Core Concepts</div>
-                <a href="/docs/models" class="nav-link">
-                    <i class="bi bi-database me-2"></i>Models & Relationships
-                </a>
-                <a href="/docs/controllers" class="nav-link">
-                    <i class="bi bi-signpost-2 me-2"></i>Controllers & Routing
-                </a>
-                <a href="/docs/validation" class="nav-link">
-                    <i class="bi bi-shield-check me-2"></i>DTO Validation
-                </a>
-                <a href="/docs/middleware" class="nav-link">
-                    <i class="bi bi-filter-circle me-2"></i>Middleware
-                </a>
+                <div class="nav-section-title" data-bs-toggle="collapse" data-bs-target="#nav-architecture" style="cursor: pointer;">
+                    <i class="bi bi-chevron-right me-1 collapse-icon"></i>Architecture
+                </div>
+                <div id="nav-architecture" class="collapse">
+                    <a href="/docs/container" class="nav-link">
+                        <i class="bi bi-box me-2"></i>Container (PSR-11)
+                    </a>
+                    <a href="/docs/config" class="nav-link">
+                        <i class="bi bi-gear-fill me-2"></i>Configuration & .env
+                    </a>
+                </div>
             </div>
 
             <div class="nav-section">
-                <div class="nav-section-title">Configuration</div>
-                <a href="/docs/bootstrap" class="nav-link">
-                    <i class="bi bi-gear me-2"></i>Application Bootstrap
-                </a>
+                <div class="nav-section-title" data-bs-toggle="collapse" data-bs-target="#nav-http" style="cursor: pointer;">
+                    <i class="bi bi-chevron-right me-1 collapse-icon"></i>HTTP Layer
+                </div>
+                <div id="nav-http" class="collapse">
+                    <a href="/docs/controllers" class="nav-link">
+                        <i class="bi bi-signpost-2 me-2"></i>Controllers & Routing
+                    </a>
+                    <a href="/docs/middleware" class="nav-link">
+                        <i class="bi bi-filter-circle me-2"></i>Middleware
+                    </a>
+                    <a href="/docs/http-client" class="nav-link">
+                        <i class="bi bi-arrow-left-right me-2"></i>HTTP Client (PSR-18)
+                    </a>
+                </div>
+            </div>
+
+            <div class="nav-section">
+                <div class="nav-section-title" data-bs-toggle="collapse" data-bs-target="#nav-database" style="cursor: pointer;">
+                    <i class="bi bi-chevron-right me-1 collapse-icon"></i>Database
+                </div>
+                <div id="nav-database" class="collapse">
+                    <a href="/docs/schema-builder" class="nav-link">
+                        <i class="bi bi-table me-2"></i>Schema Builder
+                    </a>
+                    <a href="/docs/query-builder" class="nav-link">
+                        <i class="bi bi-search me-2"></i>Query Builder
+                    </a>
+                    <a href="/docs/models" class="nav-link">
+                        <i class="bi bi-database me-2"></i>Models & ORM
+                    </a>
+                </div>
+            </div>
+
+            <div class="nav-section">
+                <div class="nav-section-title" data-bs-toggle="collapse" data-bs-target="#nav-views" style="cursor: pointer;">
+                    <i class="bi bi-chevron-right me-1 collapse-icon"></i>Views & Validation
+                </div>
+                <div id="nav-views" class="collapse">
+                    <a href="/docs/views" class="nav-link">
+                        <i class="bi bi-eye me-2"></i>Views & Blade
+                    </a>
+                    <a href="/docs/validation" class="nav-link">
+                        <i class="bi bi-shield-check me-2"></i>DTO Validation
+                    </a>
+                </div>
+            </div>
+
+            <div class="nav-section">
+                <div class="nav-section-title" data-bs-toggle="collapse" data-bs-target="#nav-utilities" style="cursor: pointer;">
+                    <i class="bi bi-chevron-right me-1 collapse-icon"></i>Utilities
+                </div>
+                <div id="nav-utilities" class="collapse">
+                    <a href="/docs/logging" class="nav-link">
+                        <i class="bi bi-journal-code me-2"></i>Logging (PSR-3)
+                    </a>
+                </div>
             </div>
 
             <div class="nav-section">
@@ -392,13 +471,30 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
 
-    <!-- Active nav link -->
+    <!-- Analytics Tracker (Beacon API) -->
+    <script src="/js/analytics.js"></script>
+
+    <!-- Active nav link and auto-expand section -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const currentPath = window.location.pathname;
+
+            // Find and mark active link
             document.querySelectorAll('.docs-sidebar .nav-link').forEach(link => {
                 if (link.getAttribute('href') === currentPath) {
                     link.classList.add('active');
+
+                    // Find parent collapse div and expand it
+                    const collapseParent = link.closest('.collapse');
+                    if (collapseParent) {
+                        collapseParent.classList.add('show');
+
+                        // Find the title that controls this collapse and remove collapsed class
+                        const titleElement = document.querySelector(`[data-bs-target="#${collapseParent.id}"]`);
+                        if (titleElement) {
+                            titleElement.classList.remove('collapsed');
+                        }
+                    }
                 }
             });
         });

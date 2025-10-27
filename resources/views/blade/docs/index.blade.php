@@ -75,7 +75,7 @@ php8.5 -S localhost:8000 -t public</code></pre>
         <li><strong>Educational</strong> - Learn how modern frameworks work under the hood</li>
     </ul>
 
-    <h2>Next Steps</h2>
+    <h2>Getting Started</h2>
     <div class="row g-4 mt-2">
         <div class="col-md-6">
             <div style="background: rgba(15, 23, 42, 0.6); border: 1px solid var(--border-color); border-radius: 0.75rem; padding: 1.5rem;">
@@ -88,9 +88,18 @@ php8.5 -S localhost:8000 -t public</code></pre>
         </div>
         <div class="col-md-6">
             <div style="background: rgba(15, 23, 42, 0.6); border: 1px solid var(--border-color); border-radius: 0.75rem; padding: 1.5rem;">
-                <h4><i class="bi bi-database me-2 text-primary"></i>Models & Relationships</h4>
-                <p class="text-white-50 mb-3">Create models with BelongsTo, HasMany, and BelongsToMany relationships.</p>
-                <a href="/docs/models" class="btn btn-sm btn-outline-light">
+                <h4><i class="bi bi-gear me-2 text-primary"></i>Configuration & .env</h4>
+                <p class="text-white-50 mb-3">Manage application configuration and environment variables.</p>
+                <a href="/docs/config" class="btn btn-sm btn-outline-light">
+                    Read Guide <i class="bi bi-arrow-right ms-1"></i>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div style="background: rgba(15, 23, 42, 0.6); border: 1px solid var(--border-color); border-radius: 0.75rem; padding: 1.5rem;">
+                <h4><i class="bi bi-box me-2 text-primary"></i>Container (PSR-11)</h4>
+                <p class="text-white-50 mb-3">Dependency injection container with automatic autowiring.</p>
+                <a href="/docs/container" class="btn btn-sm btn-outline-light">
                     Read Guide <i class="bi bi-arrow-right ms-1"></i>
                 </a>
             </div>
@@ -104,11 +113,86 @@ php8.5 -S localhost:8000 -t public</code></pre>
                 </a>
             </div>
         </div>
+    </div>
+
+    <h2 class="mt-5">Database</h2>
+    <div class="row g-4 mt-2">
+        <div class="col-md-6">
+            <div style="background: rgba(15, 23, 42, 0.6); border: 1px solid var(--border-color); border-radius: 0.75rem; padding: 1.5rem;">
+                <h4><i class="bi bi-table me-2 text-primary"></i>Schema Builder & Migrations</h4>
+                <p class="text-white-50 mb-3">Build database schemas with migrations using pipe operator.</p>
+                <a href="/docs/schema-builder" class="btn btn-sm btn-outline-light">
+                    Read Guide <i class="bi bi-arrow-right ms-1"></i>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div style="background: rgba(15, 23, 42, 0.6); border: 1px solid var(--border-color); border-radius: 0.75rem; padding: 1.5rem;">
+                <h4><i class="bi bi-search me-2 text-primary"></i>Query Builder</h4>
+                <p class="text-white-50 mb-3">Build and execute SQL queries with fluent, type-safe API.</p>
+                <a href="/docs/query-builder" class="btn btn-sm btn-outline-light">
+                    Read Guide <i class="bi bi-arrow-right ms-1"></i>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div style="background: rgba(15, 23, 42, 0.6); border: 1px solid var(--border-color); border-radius: 0.75rem; padding: 1.5rem;">
+                <h4><i class="bi bi-database me-2 text-primary"></i>Models & Relationships</h4>
+                <p class="text-white-50 mb-3">Active Record ORM with attribute-based relationships.</p>
+                <a href="/docs/models" class="btn btn-sm btn-outline-light">
+                    Read Guide <i class="bi bi-arrow-right ms-1"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <h2 class="mt-5">Views & Validation</h2>
+    <div class="row g-4 mt-2">
+        <div class="col-md-6">
+            <div style="background: rgba(15, 23, 42, 0.6); border: 1px solid var(--border-color); border-radius: 0.75rem; padding: 1.5rem;">
+                <h4><i class="bi bi-eye me-2 text-primary"></i>Views & Blade</h4>
+                <p class="text-white-50 mb-3">Build dynamic views with Blade templates and components.</p>
+                <a href="/docs/views" class="btn btn-sm btn-outline-light">
+                    Read Guide <i class="bi bi-arrow-right ms-1"></i>
+                </a>
+            </div>
+        </div>
         <div class="col-md-6">
             <div style="background: rgba(15, 23, 42, 0.6); border: 1px solid var(--border-color); border-radius: 0.75rem; padding: 1.5rem;">
                 <h4><i class="bi bi-shield-check me-2 text-primary"></i>DTO Validation</h4>
                 <p class="text-white-50 mb-3">Validate requests with type-safe DTOs and property hooks.</p>
                 <a href="/docs/validation" class="btn btn-sm btn-outline-light">
+                    Read Guide <i class="bi bi-arrow-right ms-1"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <h2 class="mt-5">HTTP & Logging</h2>
+    <div class="row g-4 mt-2">
+        <div class="col-md-6">
+            <div style="background: rgba(15, 23, 42, 0.6); border: 1px solid var(--border-color); border-radius: 0.75rem; padding: 1.5rem;">
+                <h4><i class="bi bi-filter-circle me-2 text-primary"></i>Middleware</h4>
+                <p class="text-white-50 mb-3">Create PSR-15 compliant middleware for request/response processing.</p>
+                <a href="/docs/middleware" class="btn btn-sm btn-outline-light">
+                    Read Guide <i class="bi bi-arrow-right ms-1"></i>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div style="background: rgba(15, 23, 42, 0.6); border: 1px solid var(--border-color); border-radius: 0.75rem; padding: 1.5rem;">
+                <h4><i class="bi bi-arrow-left-right me-2 text-primary"></i>HTTP Client (PSR-18)</h4>
+                <p class="text-white-50 mb-3">Make HTTP requests to external APIs with PSR-18 client.</p>
+                <a href="/docs/http-client" class="btn btn-sm btn-outline-light">
+                    Read Guide <i class="bi bi-arrow-right ms-1"></i>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div style="background: rgba(15, 23, 42, 0.6); border: 1px solid var(--border-color); border-radius: 0.75rem; padding: 1.5rem;">
+                <h4><i class="bi bi-journal-code me-2 text-primary"></i>Logging (PSR-3)</h4>
+                <p class="text-white-50 mb-3">Track application events with PSR-3 compliant logging.</p>
+                <a href="/docs/logging" class="btn btn-sm btn-outline-light">
                     Read Guide <i class="bi bi-arrow-right ms-1"></i>
                 </a>
             </div>

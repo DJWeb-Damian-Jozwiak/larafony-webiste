@@ -78,4 +78,67 @@ class DocsController extends Controller
             'description' => 'Configure your Larafony application with service providers and routes',
         ]);
     }
+
+    #[Route('/docs/container', 'GET')]
+    public function container(ServerRequestInterface $request): ResponseInterface
+    {
+        return $this->render('docs.container', [
+            'title' => 'Container (PSR-11) - Larafony Documentation',
+            'description' => 'Dependency injection container with automatic autowiring',
+        ]);
+    }
+
+    #[Route('/docs/config', 'GET')]
+    public function config(ServerRequestInterface $request): ResponseInterface
+    {
+        return $this->render('docs.config', [
+            'title' => 'Configuration & Environment - Larafony Documentation',
+            'description' => 'Manage configuration files and environment variables',
+        ]);
+    }
+
+    #[Route('/docs/schema-builder', 'GET')]
+    public function schemaBuilder(ServerRequestInterface $request): ResponseInterface
+    {
+        return $this->render('docs.schema-builder', [
+            'title' => 'Schema Builder & Migrations - Larafony Documentation',
+            'description' => 'Build and modify database schemas with migrations and pipe operator',
+        ]);
+    }
+
+    #[Route('/docs/query-builder', 'GET')]
+    public function queryBuilder(ServerRequestInterface $request): ResponseInterface
+    {
+        return $this->render('docs.query-builder', [
+            'title' => 'Query Builder - Larafony Documentation',
+            'description' => 'Build and execute SQL queries with fluent, type-safe API',
+        ]);
+    }
+
+    #[Route('/docs/views', 'GET')]
+    public function views(ServerRequestInterface $request): ResponseInterface
+    {
+        return $this->render('docs.views', [
+            'title' => 'Views & Blade - Larafony Documentation',
+            'description' => 'Build dynamic views with Blade templates and components',
+        ]);
+    }
+
+    #[Route('/docs/http-client', 'GET')]
+    public function httpClient(ServerRequestInterface $request): ResponseInterface
+    {
+        return $this->render('docs.http-client', [
+            'title' => 'HTTP Client (PSR-18) - Larafony Documentation',
+            'description' => 'Make HTTP requests to external APIs with PSR-18 client',
+        ]);
+    }
+
+    #[Route('/docs/logging', 'GET')]
+    public function logging(ServerRequestInterface $request): ResponseInterface
+    {
+        return $this->render('docs.logging', [
+            'title' => 'Logging (PSR-3) - Larafony Documentation',
+            'description' => 'Track application events with PSR-3 compliant logging',
+        ]);
+    }
 }
