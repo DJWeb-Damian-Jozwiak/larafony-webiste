@@ -459,7 +459,13 @@
             </a>
         </p>
         <p class="mt-3 small">
-            © 2025 Larafony Framework. Built with <i class="bi bi-heart-fill text-danger"></i> using PHP 8.5
+            © 2025 Larafony Framework. Licensed under <a href="https://opensource.org/licenses/MIT" target="_blank" style="color: var(--primary-color);">MIT License</a>.
+        </p>
+        <p class="small">
+            <a href="/privacy" style="color: var(--text-muted); text-decoration: none;">Privacy Policy</a>
+        </p>
+        <p>
+            Built with <i class="bi bi-heart-fill text-danger"></i> using PHP 8.5 & Larafony
         </p>
     </footer>
 

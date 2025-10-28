@@ -274,7 +274,10 @@
             <div class="row mt-4">
                 <div class="col-12 text-center">
                     <p class="mb-0 text-white-50 small">
-                        © 2025 Larafony Framework. Open source and free forever.
+                        © 2025 Larafony Framework. Licensed under <a href="https://opensource.org/licenses/MIT" target="_blank" class="text-white-50">MIT License</a>.
+                    </p>
+                    <p class="mb-0 text-white-50 small mt-2">
+                        <a href="/privacy" class="text-white-50 text-decoration-none">Privacy Policy</a>
                     </p>
                 </div>
             </div>

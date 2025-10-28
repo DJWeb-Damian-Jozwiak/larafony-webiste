@@ -19,4 +19,13 @@ class HomeController extends Controller
             'description' => 'Larafony is a modern PHP 8.5 framework built for clarity, not complexity. PSR-compliant, attribute-based, and production-ready.'
         ]);
     }
+
+    #[Route('/privacy', 'GET')]
+    public function privacy(ServerRequestInterface $request): ResponseInterface
+    {
+        return $this->render('privacy', [
+            'title' => 'Privacy Policy - Larafony Framework',
+            'description' => 'Privacy Policy for Larafony Framework website'
+        ]);
+    }
 }

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://larafony.com/sitemap.xml
