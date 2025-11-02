@@ -420,12 +420,15 @@
                 </div>
             </div>
             <div class="nav-section">
-                <div class="nav-section-title" data-bs-toggle="collapse" data-bs-target="#nav-views" style="cursor: pointer;">
-                    <i class="bi bi-chevron-right me-1 collapse-icon"></i>Error handling
+                <div class="nav-section-title" data-bs-toggle="collapse" data-bs-target="#nav-error-handling" style="cursor: pointer;">
+                    <i class="bi bi-chevron-right me-1 collapse-icon"></i>Error Handling
                 </div>
-                <div id="nav-views" class="collapse">
+                <div id="nav-error-handling" class="collapse">
                     <a href="/docs/error-handling/web" class="nav-link">
-                        <i class="bi bi-eye me-2"></i>Web
+                        <i class="bi bi-globe me-2"></i>Web Error Pages
+                    </a>
+                    <a href="/docs/error-handling/console" class="nav-link">
+                        <i class="bi bi-terminal me-2"></i>Console Debugging 🎯
                     </a>
                 </div>
             </div>

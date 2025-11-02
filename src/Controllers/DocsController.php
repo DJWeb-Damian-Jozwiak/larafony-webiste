@@ -155,9 +155,19 @@ class DocsController extends Controller
     public function errorHandlingWeb(ServerRequestInterface $request): ResponseInterface
     {
         return $this->render('docs.error-handling-web', [
-            'title' => 'Error Handling - Larafony Framework',
+            'title' => 'Web Error Handling - Larafony Framework',
             'description' => 'Comprehensive error handling system with beautiful debug views and production error pages',
             'activeMenu' => 'error-handling-web',
+        ]);
+    }
+
+    #[Route('/docs/error-handling/console', 'GET')]
+    public function errorHandlingConsole(ServerRequestInterface $request): ResponseInterface
+    {
+        return $this->render('docs.console-debugging', [
+            'title' => 'Console Interactive Debugging - Larafony Framework',
+            'description' => 'The only PHP framework with native, built-from-scratch interactive error debugging in the console - REPL-like experience for CLI commands',
+            'activeMenu' => 'error-handling-console',
         ]);
     }
 }
