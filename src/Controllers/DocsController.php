@@ -170,4 +170,22 @@ class DocsController extends Controller
             'activeMenu' => 'error-handling-console',
         ]);
     }
+
+    #[Route('/docs/encryption', 'GET')]
+    public function encryption(ServerRequestInterface $request): ResponseInterface
+    {
+        return $this->render('docs.encryption', [
+            'title' => 'Encryption - Larafony Documentation',
+            'description' => 'Modern encryption using libsodium\'s XChaCha20-Poly1305 AEAD cipher for maximum security',
+        ]);
+    }
+
+    #[Route('/docs/session-cookies', 'GET')]
+    public function sessionCookies(ServerRequestInterface $request): ResponseInterface
+    {
+        return $this->render('docs.session-cookies', [
+            'title' => 'Sessions & Cookies - Larafony Documentation',
+            'description' => 'Encrypted session management with file and database storage, plus secure cookie handling',
+        ]);
+    }
 }

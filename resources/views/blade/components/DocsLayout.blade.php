@@ -434,6 +434,20 @@
             </div>
 
             <div class="nav-section">
+                <div class="nav-section-title" data-bs-toggle="collapse" data-bs-target="#nav-security" style="cursor: pointer;">
+                    <i class="bi bi-chevron-right me-1 collapse-icon"></i>Security
+                </div>
+                <div id="nav-security" class="collapse">
+                    <a href="/docs/encryption" class="nav-link">
+                        <i class="bi bi-shield-lock me-2"></i>Encryption
+                    </a>
+                    <a href="/docs/session-cookies" class="nav-link">
+                        <i class="bi bi-cookie me-2"></i>Sessions & Cookies
+                    </a>
+                </div>
+            </div>
+
+            <div class="nav-section">
                 <div class="nav-section-title" data-bs-toggle="collapse" data-bs-target="#nav-utilities" style="cursor: pointer;">
                     <i class="bi bi-chevron-right me-1 collapse-icon"></i>Utilities
                 </div>
