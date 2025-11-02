@@ -10,6 +10,7 @@
     <meta name="description" content="{{ $description ?? 'Larafony is a modern PHP 8.5 framework built for clarity, not complexity. PSR-compliant, attribute-based, and production-ready.' }}">
     <meta name="keywords" content="Larafony, PHP 8.5, Framework, PSR, Modern PHP, Attribute-based, ORM, Blade Templates, Middleware, Type-safe">
     <meta name="author" content="Larafony">
+    <link rel="canonical" href="https://larafony.com{{ $_SERVER['REQUEST_URI'] ?? '/' }}">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">

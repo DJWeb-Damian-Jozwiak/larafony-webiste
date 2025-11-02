@@ -150,4 +150,14 @@ class DocsController extends Controller
             'description' => 'Build modern SPAs with Inertia.js and Vue.js using server-side routing',
         ]);
     }
+
+    #[Route('/docs/error-handling/web', 'GET')]
+    public function errorHandlingWeb(ServerRequestInterface $request): ResponseInterface
+    {
+        return $this->render('docs.error-handling-web', [
+            'title' => 'Error Handling - Larafony Framework',
+            'description' => 'Comprehensive error handling system with beautiful debug views and production error pages',
+            'activeMenu' => 'error-handling-web',
+        ]);
+    }
 }

@@ -10,6 +10,7 @@
     <meta name="description" content="{{ $description ?? 'Complete documentation for Larafony Framework - Modern PHP 8.5 framework' }}">
     <meta name="keywords" content="Larafony, PHP 8.5, Framework Documentation, PSR, Modern PHP, Attribute-based, ORM, Blade Templates, Middleware, Type-safe, Tutorial">
     <meta name="author" content="Larafony">
+    <link rel="canonical" href="https://larafony.com{{ $_SERVER['REQUEST_URI'] ?? '/docs' }}">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
@@ -415,6 +416,16 @@
                     </a>
                     <a href="/docs/validation" class="nav-link">
                         <i class="bi bi-shield-check me-2"></i>DTO Validation
+                    </a>
+                </div>
+            </div>
+            <div class="nav-section">
+                <div class="nav-section-title" data-bs-toggle="collapse" data-bs-target="#nav-views" style="cursor: pointer;">
+                    <i class="bi bi-chevron-right me-1 collapse-icon"></i>Error handling
+                </div>
+                <div id="nav-views" class="collapse">
+                    <a href="/docs/error-handling/web" class="nav-link">
+                        <i class="bi bi-eye me-2"></i>Web
                     </a>
                 </div>
             </div>

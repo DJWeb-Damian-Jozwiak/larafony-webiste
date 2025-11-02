@@ -1,11 +1,14 @@
 <?php
 
-use Larafony\Framework\Web\Middleware\HandleNotFound;
+use App\Middleware\HandleInternalError;
+use App\Middleware\HandleNotFound;
+use Larafony\Framework\Http\Middleware\InertiaMiddleware;
 
 return [
     'before_global' => [
-        HandleNotFound::class,
     ],
-    'global' => [],
+    'global' => [
+        InertiaMiddleware::class,
+    ],
     'after_global' => [],
 ];
