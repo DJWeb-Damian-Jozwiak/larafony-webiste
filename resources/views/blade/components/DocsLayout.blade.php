@@ -448,6 +448,17 @@
             </div>
 
             <div class="nav-section">
+                <div class="nav-section-title" data-bs-toggle="collapse" data-bs-target="#nav-communication" style="cursor: pointer;">
+                    <i class="bi bi-chevron-right me-1 collapse-icon"></i>Communication
+                </div>
+                <div id="nav-communication" class="collapse">
+                    <a href="/docs/mail" class="nav-link">
+                        <i class="bi bi-envelope me-2"></i>Sending Emails
+                    </a>
+                </div>
+            </div>
+
+            <div class="nav-section">
                 <div class="nav-section-title" data-bs-toggle="collapse" data-bs-target="#nav-utilities" style="cursor: pointer;">
                     <i class="bi bi-chevron-right me-1 collapse-icon"></i>Utilities
                 </div>

@@ -188,4 +188,13 @@ class DocsController extends Controller
             'description' => 'Encrypted session management with file and database storage, plus secure cookie handling',
         ]);
     }
+
+    #[Route('/docs/mail', 'GET')]
+    public function mail(ServerRequestInterface $request): ResponseInterface
+    {
+        return $this->render('docs.mail', [
+            'title' => 'Sending Emails - Larafony Documentation',
+            'description' => 'Native SMTP implementation with Laravel-inspired Mailable classes - no external dependencies',
+        ]);
+    }
 }
