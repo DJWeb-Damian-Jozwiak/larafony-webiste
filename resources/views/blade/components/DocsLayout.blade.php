@@ -410,6 +410,9 @@
                     <a href="/docs/views" class="nav-link">
                         <i class="bi bi-eye me-2"></i>Views & Blade
                     </a>
+                    <a href="/docs/inertia" class="nav-link">
+                        <i class="bi bi-lightning-charge me-2"></i>Inertia.js & Vue
+                    </a>
                     <a href="/docs/validation" class="nav-link">
                         <i class="bi bi-shield-check me-2"></i>DTO Validation
                     </a>

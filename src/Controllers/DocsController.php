@@ -141,4 +141,13 @@ class DocsController extends Controller
             'description' => 'Track application events with PSR-3 compliant logging',
         ]);
     }
+
+    #[Route('/docs/inertia', 'GET')]
+    public function inertiaDocs(ServerRequestInterface $request): ResponseInterface
+    {
+        return $this->render('docs.inertia', [
+            'title' => 'Inertia.js & Vue - Larafony Documentation',
+            'description' => 'Build modern SPAs with Inertia.js and Vue.js using server-side routing',
+        ]);
+    }
 }
