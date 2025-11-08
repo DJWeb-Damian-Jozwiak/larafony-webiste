@@ -366,6 +366,9 @@
                     <a href="/docs/config" class="nav-link">
                         <i class="bi bi-gear-fill me-2"></i>Configuration & .env
                     </a>
+                    <a href="/docs/auth" class="nav-link">
+                        <i class="bi bi-shield-lock-fill me-2"></i>Auth - Roles & Permissions
+                    </a>
                 </div>
             </div>
 

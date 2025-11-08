@@ -197,4 +197,13 @@ class DocsController extends Controller
             'description' => 'Native SMTP implementation with Laravel-inspired Mailable classes - no external dependencies',
         ]);
     }
+
+    #[Route('/docs/auth', 'GET')]
+    public function auth(ServerRequestInterface $request): ResponseInterface
+    {
+        return $this->render('docs.auth', [
+            'title' => 'Authorization - Roles & Permissions - Larafony Documentation',
+            'description' => 'Built-in Role-Based Access Control (RBAC) system for fine-grained authorization - no external packages required',
+        ]);
+    }
 }
