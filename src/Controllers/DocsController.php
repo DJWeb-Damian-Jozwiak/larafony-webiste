@@ -206,4 +206,13 @@ class DocsController extends Controller
             'description' => 'Built-in Role-Based Access Control (RBAC) system for fine-grained authorization - no external packages required',
         ]);
     }
+
+    #[Route('/docs/cache', 'GET')]
+    public function cache(ServerRequestInterface $request): ResponseInterface
+    {
+        return $this->render('docs.cache', [
+            'title' => 'Cache Optimization - Larafony Documentation',
+            'description' => 'Enterprise-grade PSR-6 caching with multi-backend support, intelligent optimization, and authorization integration',
+        ]);
+    }
 }

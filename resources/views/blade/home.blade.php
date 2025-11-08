@@ -135,7 +135,7 @@
                             <i class="bi bi-1-circle-fill text-primary me-2"></i>
                             Create a new project
                         </h4>
-                        <pre class="line-numbers"><code class="language-bash">composer create-project larafony/skeleton my-app</code></pre>
+                        <pre class="line-numbers"><code class="language-bash">composer create-project larafony/skeleton:dev-main my-app --stability=dev</code></pre>
                     </div>
 
                     <div class="mb-4">
@@ -149,14 +149,57 @@
                     <div class="mb-4">
                         <h4 class="text-white mb-3">
                             <i class="bi bi-3-circle-fill text-primary me-2"></i>
+                            Install frontend dependencies (Inertia.js + Vue)
+                        </h4>
+                        <pre class="line-numbers"><code class="language-bash">npm install</code></pre>
+                    </div>
+
+                    <div class="mb-4">
+                        <h4 class="text-white mb-3">
+                            <i class="bi bi-4-circle-fill text-primary me-2"></i>
+                            Build frontend assets
+                        </h4>
+                        <pre class="line-numbers"><code class="language-bash">npm run build</code></pre>
+                    </div>
+
+                    <div class="mb-4">
+                        <h4 class="text-white mb-3">
+                            <i class="bi bi-5-circle-fill text-primary me-2"></i>
+                            Run the installer (database setup + demo data)
+                        </h4>
+                        <pre class="line-numbers"><code class="language-bash">php bin/larafony build:notes</code></pre>
+                    </div>
+
+                    <div class="mb-4">
+                        <h4 class="text-white mb-3">
+                            <i class="bi bi-6-circle-fill text-primary me-2"></i>
                             Start the development server
                         </h4>
                         <pre class="line-numbers"><code class="language-bash">php8.5 -S localhost:8000 -t public</code></pre>
                     </div>
 
-                    <div class="alert alert-info border-0 mt-4" style="background: rgba(99, 102, 241, 0.15); color: #cbd5e1;">
+                    <div class="alert alert-success border-0 mt-4" style="background: rgba(34, 197, 94, 0.15); color: #cbd5e1;">
+                        <i class="bi bi-rocket-takeoff-fill me-2"></i>
+                        <strong>Done!</strong> Visit <a href="http://localhost:8000/notes" target="_blank" class="text-white fw-bold">localhost:8000/notes</a> to see the demo app with Blade templates and <a href="http://localhost:8000/inertia/notes" target="_blank" class="text-white fw-bold">localhost:8000/inertia/notes</a> for the Inertia.js version.
+                    </div>
+
+                    <div class="alert alert-warning border-0 mt-3" style="background: rgba(251, 191, 36, 0.15); color: #cbd5e1;">
+                        <i class="bi bi-exclamation-triangle-fill me-2"></i>
+                        <strong>Optional - Redis/Memcached Cache:</strong><br>
+                        As of Nov. 8, 2025, there are no <code class="text-warning">php8.5-redis</code> or <code class="text-warning">php8.5-memcached</code> packages available.<br><br>
+                        <strong>Temporary solution:</strong> Run <code class="text-warning">./build.sh</code> from project root to compile extensions from source.<br><br>
+                        <strong>After official PHP 8.5 release:</strong> Simply run:
+                        <ul class="mb-0 mt-2">
+                            <li><strong>Debian/Ubuntu:</strong> <code class="text-warning">sudo apt install php8.5-redis php8.5-memcached</code></li>
+                            <li><strong>RHEL/Fedora:</strong> <code class="text-warning">sudo dnf install php-redis php-memcached</code> (via Remi repository)</li>
+                            <li><strong>Windows:</strong> Use WSL2 with Ubuntu 😎 (or hope XAMPP/WAMPP adds latest PHP with cache drivers)</li>
+                        </ul>
+                        FileStorage cache works out of the box, no setup required.
+                    </div>
+
+                    <div class="alert alert-info border-0 mt-3" style="background: rgba(99, 102, 241, 0.15); color: #cbd5e1;">
                         <i class="bi bi-info-circle-fill me-2"></i>
-                        <strong>Requirements:</strong> PHP ≥ 8.5, Composer, MySQL/PostgreSQL/SQLite
+                        <strong>Requirements:</strong> PHP ≥ 8.5, Composer, Node.js ≥ 22, MySQL/PostgreSQL/SQLite
                     </div>
                 </div>
             </div>

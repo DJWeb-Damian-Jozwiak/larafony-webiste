@@ -369,6 +369,9 @@
                     <a href="/docs/auth" class="nav-link">
                         <i class="bi bi-shield-lock-fill me-2"></i>Auth - Roles & Permissions
                     </a>
+                    <a href="/docs/cache" class="nav-link">
+                        <i class="bi bi-lightning-charge-fill me-2"></i>Cache Optimization
+                    </a>
                 </div>
             </div>
 
