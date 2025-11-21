@@ -215,4 +215,22 @@ class DocsController extends Controller
             'description' => 'Enterprise-grade PSR-6 caching with multi-backend support, intelligent optimization, and authorization integration',
         ]);
     }
+
+    #[Route('/docs/events', 'GET')]
+    public function events(ServerRequestInterface $request): ResponseInterface
+    {
+        return $this->render('docs.events', [
+            'title' => 'Event System (PSR-14) - Larafony Documentation',
+            'description' => 'Built-in event dispatcher with PSR-14 compliance, listener priority management, and stoppable event propagation',
+        ]);
+    }
+
+    #[Route('/docs/debugbar', 'GET')]
+    public function debugbar(ServerRequestInterface $request): ResponseInterface
+    {
+        return $this->render('docs.debugbar', [
+            'title' => 'Debugbar & Model Eager Loading - Larafony Documentation',
+            'description' => 'Professional debugging toolbar with query monitoring, N+1 detection, performance metrics, and automatic eager loading optimization',
+        ]);
+    }
 }

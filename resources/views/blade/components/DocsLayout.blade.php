@@ -472,6 +472,20 @@
                     <a href="/docs/logging" class="nav-link">
                         <i class="bi bi-journal-code me-2"></i>Logging (PSR-3)
                     </a>
+                    <a href="/docs/events" class="nav-link">
+                        <i class="bi bi-broadcast me-2"></i>Event System (PSR-14)
+                    </a>
+                </div>
+            </div>
+
+            <div class="nav-section">
+                <div class="nav-section-title" data-bs-toggle="collapse" data-bs-target="#nav-debugging" style="cursor: pointer;">
+                    <i class="bi bi-chevron-right me-1 collapse-icon"></i>Debugging
+                </div>
+                <div id="nav-debugging" class="collapse">
+                    <a href="/docs/debugbar" class="nav-link">
+                        <i class="bi bi-bug me-2"></i>DebugBar & Eager Loading
+                    </a>
                 </div>
             </div>
 
