@@ -317,7 +317,7 @@
                             <i class="bi bi-1-circle-fill text-primary me-2"></i>
                             Create a new project
                         </h4>
-                        <pre class="line-numbers"><code class="language-bash">composer create-project larafony/skeleton:dev-main my-app</code></pre>
+                        <pre class="line-numbers"><code class="language-bash">composer create-project larafony/skeleton my-app</code></pre>
                     </div>
 
                     <div class="mb-4">
