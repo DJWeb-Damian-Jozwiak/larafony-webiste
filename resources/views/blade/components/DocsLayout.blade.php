@@ -479,6 +479,17 @@
             </div>
 
             <div class="nav-section">
+                <div class="nav-section-title" data-bs-toggle="collapse" data-bs-target="#nav-async" style="cursor: pointer;">
+                    <i class="bi bi-chevron-right me-1 collapse-icon"></i>Background Jobs
+                </div>
+                <div id="nav-async" class="collapse">
+                    <a href="/docs/queue-jobs" class="nav-link">
+                        <i class="bi bi-hourglass-split me-2"></i>Queue & Jobs
+                    </a>
+                </div>
+            </div>
+
+            <div class="nav-section">
                 <div class="nav-section-title" data-bs-toggle="collapse" data-bs-target="#nav-debugging" style="cursor: pointer;">
                     <i class="bi bi-chevron-right me-1 collapse-icon"></i>Debugging
                 </div>

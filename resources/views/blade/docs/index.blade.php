@@ -64,7 +64,7 @@ php8.5 -S localhost:8000 -t public</code></pre>
 
     <h2>Philosophy</h2>
     <blockquote style="border-left: 4px solid var(--primary-color); padding-left: 1.5rem; margin: 2rem 0; font-style: italic; color: #cbd5e1;">
-        "The best framework is the one you can replace piece by piece — because you understand it completely."
+        "The best framework is the one you can replace piece by piece - because you understand it completely."
     </blockquote>
     <p>
         Larafony is not just a framework—it's a learning tool. Every component is designed to be:
@@ -193,6 +193,19 @@ php8.5 -S localhost:8000 -t public</code></pre>
                 <h4><i class="bi bi-journal-code me-2 text-primary"></i>Logging (PSR-3)</h4>
                 <p class="text-white-50 mb-3">Track application events with PSR-3 compliant logging.</p>
                 <a href="/docs/logging" class="btn btn-sm btn-outline-light">
+                    Read Guide <i class="bi bi-arrow-right ms-1"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <h2 class="mt-5">Background Processing</h2>
+    <div class="row g-4 mt-2">
+        <div class="col-md-6">
+            <div style="background: rgba(15, 23, 42, 0.6); border: 1px solid var(--border-color); border-radius: 0.75rem; padding: 1.5rem;">
+                <h4><i class="bi bi-hourglass-split me-2 text-primary"></i>Queue & Jobs</h4>
+                <p class="text-white-50 mb-3">Enterprise-grade job scheduling with ORM, Clock integration, and UUID support.</p>
+                <a href="/docs/queue-jobs" class="btn btn-sm btn-outline-light">
                     Read Guide <i class="bi bi-arrow-right ms-1"></i>
                 </a>
             </div>

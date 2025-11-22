@@ -98,8 +98,8 @@
                         </div>
                         <h3 class="h4 mb-3">Active Record ORM</h3>
                         <p class="text-white-50">
-                            Eloquent-inspired ORM with relationships, query builder, migrations, and seeders.
-                            Database operations made simple.
+                            Thanks to PHP 8.4+ property hooks, it was finally possible to create ORM in PHP behaving like Entity Framework from C#.
+                            Relationships, query builder, migrations, and seeders included.
                         </p>
                     </div>
                 </div>
@@ -113,6 +113,188 @@
                         <p class="text-white-50">
                             Clean data transformation pipelines using the pipe operator.
                             Transform data with readable, functional code.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="bi bi-hourglass-split"></i>
+                        </div>
+                        <h3 class="h4 mb-3">Queue & Jobs</h3>
+                        <p class="text-white-50">
+                            ORM-based job queue with UUID support, Clock integration, and cron scheduling.
+                            Process background tasks with database or Redis backends.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="bi bi-broadcast"></i>
+                        </div>
+                        <h3 class="h4 mb-3">Event System (PSR-14)</h3>
+                        <p class="text-white-50">
+                            Event dispatcher with listener priority, stoppable propagation, and full PSR-14 compliance.
+                            Decouple your application logic with events.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="bi bi-lightning-charge-fill"></i>
+                        </div>
+                        <h3 class="h4 mb-3">Cache (PSR-6)</h3>
+                        <p class="text-white-50">
+                            Multi-backend caching with Redis, Memcached, and file storage.
+                            Authorization-aware cache for role-based content.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="bi bi-shield-lock-fill"></i>
+                        </div>
+                        <h3 class="h4 mb-3">Authorization (RBAC)</h3>
+                        <p class="text-white-50">
+                            Built-in role and permission system with policy classes.
+                            Fine-grained access control without external packages.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="bi bi-key-fill"></i>
+                        </div>
+                        <h3 class="h4 mb-3">Encryption</h3>
+                        <p class="text-white-50">
+                            Modern libsodium XChaCha20-Poly1305 AEAD encryption.
+                            Secure sessions, cookies, and sensitive data by default.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="bi bi-cookie"></i>
+                        </div>
+                        <h3 class="h4 mb-3">Sessions & Cookies</h3>
+                        <p class="text-white-50">
+                            Encrypted session management with file and database drivers.
+                            Secure, tamper-proof cookies out of the box.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="bi bi-envelope-fill"></i>
+                        </div>
+                        <h3 class="h4 mb-3">Mail</h3>
+                        <p class="text-white-50">
+                            Native SMTP implementation with Mailable classes.
+                            Send emails without external dependencies.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="bi bi-speedometer2"></i>
+                        </div>
+                        <h3 class="h4 mb-3">Debug Toolbar</h3>
+                        <p class="text-white-50">
+                            Professional debug bar with query monitoring, N+1 detection, and performance metrics.
+                            Automatic eager loading optimization.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="bi bi-bug-fill"></i>
+                        </div>
+                        <h3 class="h4 mb-3">Error Handling</h3>
+                        <p class="text-white-50">
+                            Beautiful debug views for web and interactive REPL-like debugging in console.
+                            The only PHP framework with built-from-scratch CLI debugging.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="bi bi-terminal-fill"></i>
+                        </div>
+                        <h3 class="h4 mb-3">Console Commands</h3>
+                        <p class="text-white-50">
+                            Artisan-like CLI with migrations, seeders, queue workers, and interactive debugging in terminal.
+                            Beautiful console output and progress bars.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="bi bi-arrow-left-right"></i>
+                        </div>
+                        <h3 class="h4 mb-3">HTTP Client (PSR-18)</h3>
+                        <p class="text-white-50">
+                            Make HTTP requests to external APIs with PSR-18 compliant client.
+                            Clean, fluent interface for API integrations.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="bi bi-window-stack"></i>
+                        </div>
+                        <h3 class="h4 mb-3">Inertia.js Support</h3>
+                        <p class="text-white-50">
+                            Build modern SPAs with Vue.js using server-side routing.
+                            No separate API needed, full framework integration.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="bi bi-clock-history"></i>
+                        </div>
+                        <h3 class="h4 mb-3">Clock System (PSR-20)</h3>
+                        <p class="text-white-50">
+                            PSR-20 compliant clock for testable time operations.
+                            Freeze time in tests, no more DateTimeImmutable headaches.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="bi bi-journal-code"></i>
+                        </div>
+                        <h3 class="h4 mb-3">Logging (PSR-3)</h3>
+                        <p class="text-white-50">
+                            PSR-3 compliant logging with multiple channels and handlers.
+                            Track application events with ease.
                         </p>
                     </div>
                 </div>
@@ -135,7 +317,7 @@
                             <i class="bi bi-1-circle-fill text-primary me-2"></i>
                             Create a new project
                         </h4>
-                        <pre class="line-numbers"><code class="language-bash">composer create-project larafony/skeleton:dev-main my-app --stability=dev</code></pre>
+                        <pre class="line-numbers"><code class="language-bash">composer create-project larafony/skeleton:dev-main my-app</code></pre>
                     </div>
 
                     <div class="mb-4">
@@ -186,12 +368,12 @@
                     <div class="alert alert-warning border-0 mt-3" style="background: rgba(251, 191, 36, 0.15); color: #cbd5e1;">
                         <i class="bi bi-exclamation-triangle-fill me-2"></i>
                         <strong>Optional - Redis/Memcached Cache:</strong><br>
-                        As of Nov. 8, 2025, there are no <code class="text-warning">php8.5-redis</code> or <code class="text-warning">php8.5-memcached</code> packages available.<br><br>
+                        As of Nov. 22, 2025, there is no <code class="text-warning">php8.5-memcached</code> packages available.<br><br>
                         <strong>Temporary solution:</strong> Run <code class="text-warning">./build.sh</code> from project root to compile extensions from source.<br><br>
-                        <strong>After official PHP 8.5 release:</strong> Simply run:
+                        <strong>For Redis:</strong> Simply run:
                         <ul class="mb-0 mt-2">
-                            <li><strong>Debian/Ubuntu:</strong> <code class="text-warning">sudo apt install php8.5-redis php8.5-memcached</code></li>
-                            <li><strong>RHEL/Fedora:</strong> <code class="text-warning">sudo dnf install php-redis php-memcached</code> (via Remi repository)</li>
+                            <li><strong>Debian/Ubuntu:</strong> <code class="text-warning">sudo apt install php8.5-redis</code></li>
+                            <li><strong>RHEL/Fedora:</strong> <code class="text-warning">sudo dnf install php-redis</code> (via Remi repository)</li>
                             <li><strong>Windows:</strong> Use WSL2 with Ubuntu 😎 (or hope XAMPP/WAMPP adds latest PHP with cache drivers)</li>
                         </ul>
                         FileStorage cache works out of the box, no setup required.

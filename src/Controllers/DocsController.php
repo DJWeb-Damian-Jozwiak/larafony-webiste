@@ -233,4 +233,13 @@ class DocsController extends Controller
             'description' => 'Professional debugging toolbar with query monitoring, N+1 detection, performance metrics, and automatic eager loading optimization',
         ]);
     }
+
+    #[Route('/docs/queue-jobs', 'GET')]
+    public function queueJobs(ServerRequestInterface $request): ResponseInterface
+    {
+        return $this->render('docs.queue-jobs', [
+            'title' => 'Queue & Jobs - Larafony Documentation',
+            'description' => 'Enterprise-grade job scheduling and queue processing with ORM integration, Clock-based timestamps, UUID support, and comprehensive failed job handling',
+        ]);
+    }
 }
