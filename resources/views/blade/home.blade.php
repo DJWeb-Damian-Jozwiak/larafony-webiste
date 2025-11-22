@@ -383,6 +383,14 @@
                         <i class="bi bi-info-circle-fill me-2"></i>
                         <strong>Requirements:</strong> PHP ≥ 8.5, Composer, Node.js ≥ 22, MySQL/PostgreSQL/SQLite
                     </div>
+
+                    <div class="alert alert-info border-0 mt-3" style="background: rgba(59, 130, 246, 0.15); color: #cbd5e1;">
+                        <i class="bi bi-box-seam me-2"></i>
+                        <strong>Composer v2.9 Required:</strong> Larafony & PHP 8.5 require Composer v2.9+. If you get any deprecation warnings, simply run <code class="text-info">composer self-update</code>.<br>
+                        <small class="text-white-50 mt-2 d-block">
+                            <strong>PS:</strong> Composer 2.9 can automatically not install vulnerable packages and automatically resolve conflicts in lock file, so it's highly recommended to update your Composer instance.
+                        </small>
+                    </div>
                 </div>
             </div>
         </div>
