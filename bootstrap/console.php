@@ -2,22 +2,28 @@
 
 declare(strict_types=1);
 
+use Larafony\Framework\Cache\ServiceProviders\CacheServiceProvider;
 use Larafony\Framework\Config\ServiceProviders\ConfigServiceProvider;
 use Larafony\Framework\Console\ServiceProviders\ConsoleServiceProvider;
 use Larafony\Framework\Database\ServiceProviders\DatabaseServiceProvider;
 use Larafony\Framework\ErrorHandler\ServiceProviders\ErrorHandlerServiceProvider;
 use Larafony\Framework\Http\ServiceProviders\HttpServiceProvider;
+use Larafony\Framework\MCP\ServiceProviders\McpServiceProvider;
+use Larafony\McpAssistant\McpAssistantServiceProvider;
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
 $app = \Larafony\Framework\Console\Application::instance(base_path: dirname(__DIR__));
 
 $app->withServiceProviders([
-    ErrorHandlerServiceProvider::class,
     HttpServiceProvider::class,
     ConfigServiceProvider::class,
-    DatabaseServiceProvider::class,
+    CacheServiceProvider::class,
     ConsoleServiceProvider::class,
+    DatabaseServiceProvider::class,
+    McpServiceProvider::class,
+    McpAssistantServiceProvider::class,
+    ErrorHandlerServiceProvider::class,
 ]);
 
 return $app;

@@ -480,11 +480,14 @@
 
             <div class="nav-section">
                 <div class="nav-section-title" data-bs-toggle="collapse" data-bs-target="#nav-async" style="cursor: pointer;">
-                    <i class="bi bi-chevron-right me-1 collapse-icon"></i>Background Jobs
+                    <i class="bi bi-chevron-right me-1 collapse-icon"></i>Async & Real-Time
                 </div>
                 <div id="nav-async" class="collapse">
                     <a href="/docs/queue-jobs" class="nav-link">
                         <i class="bi bi-hourglass-split me-2"></i>Queue & Jobs
+                    </a>
+                    <a href="/docs/websockets" class="nav-link">
+                        <i class="bi bi-broadcast-pin me-2"></i>WebSockets
                     </a>
                 </div>
             </div>
@@ -496,6 +499,17 @@
                 <div id="nav-debugging" class="collapse">
                     <a href="/docs/debugbar" class="nav-link">
                         <i class="bi bi-bug me-2"></i>DebugBar & Eager Loading
+                    </a>
+                </div>
+            </div>
+
+            <div class="nav-section">
+                <div class="nav-section-title" data-bs-toggle="collapse" data-bs-target="#nav-bridges" style="cursor: pointer;">
+                    <i class="bi bi-chevron-right me-1 collapse-icon"></i>Bridges
+                </div>
+                <div id="nav-bridges" class="collapse">
+                    <a href="/docs/bridges" class="nav-link">
+                        <i class="bi bi-plug me-2"></i>Bridge Packages
                     </a>
                 </div>
             </div>

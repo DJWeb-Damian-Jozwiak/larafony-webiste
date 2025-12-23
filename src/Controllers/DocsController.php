@@ -242,4 +242,22 @@ class DocsController extends Controller
             'description' => 'Enterprise-grade job scheduling and queue processing with ORM integration, Clock-based timestamps, UUID support, and comprehensive failed job handling',
         ]);
     }
+
+    #[Route('/docs/websockets', 'GET')]
+    public function websockets(ServerRequestInterface $request): ResponseInterface
+    {
+        return $this->render('docs.websockets', [
+            'title' => 'WebSockets - Real-Time Communication - Larafony Documentation',
+            'description' => 'Real-time bidirectional communication with native PHP 8.5 Fibers engine and optional ReactPHP bridge for production scale',
+        ]);
+    }
+
+    #[Route('/docs/bridges', 'GET')]
+    public function bridges(ServerRequestInterface $request): ResponseInterface
+    {
+        return $this->render('docs.bridges', [
+            'title' => 'Bridge Packages - Larafony Documentation',
+            'description' => 'Official bridge packages to integrate popular PHP libraries with Larafony Framework',
+        ]);
+    }
 }

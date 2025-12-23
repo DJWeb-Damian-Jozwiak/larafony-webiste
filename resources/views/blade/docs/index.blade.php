@@ -199,13 +199,137 @@ php8.5 -S localhost:8000 -t public</code></pre>
         </div>
     </div>
 
-    <h2 class="mt-5">Background Processing</h2>
+    <h2 class="mt-5">Security & Sessions</h2>
+    <div class="row g-4 mt-2">
+        <div class="col-md-6">
+            <div style="background: rgba(15, 23, 42, 0.6); border: 1px solid var(--border-color); border-radius: 0.75rem; padding: 1.5rem;">
+                <h4><i class="bi bi-cookie me-2 text-primary"></i>Sessions & Cookies</h4>
+                <p class="text-white-50 mb-3">Encrypted session management with file and database drivers.</p>
+                <a href="/docs/session-cookies" class="btn btn-sm btn-outline-light">
+                    Read Guide <i class="bi bi-arrow-right ms-1"></i>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div style="background: rgba(15, 23, 42, 0.6); border: 1px solid var(--border-color); border-radius: 0.75rem; padding: 1.5rem;">
+                <h4><i class="bi bi-key me-2 text-primary"></i>Encryption</h4>
+                <p class="text-white-50 mb-3">Modern libsodium XChaCha20-Poly1305 AEAD encryption.</p>
+                <a href="/docs/encryption" class="btn btn-sm btn-outline-light">
+                    Read Guide <i class="bi bi-arrow-right ms-1"></i>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div style="background: rgba(15, 23, 42, 0.6); border: 1px solid var(--border-color); border-radius: 0.75rem; padding: 1.5rem;">
+                <h4><i class="bi bi-shield-lock me-2 text-primary"></i>Authorization (RBAC)</h4>
+                <p class="text-white-50 mb-3">Role and permission system with policy classes.</p>
+                <a href="/docs/auth" class="btn btn-sm btn-outline-light">
+                    Read Guide <i class="bi bi-arrow-right ms-1"></i>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div style="background: rgba(15, 23, 42, 0.6); border: 1px solid var(--border-color); border-radius: 0.75rem; padding: 1.5rem;">
+                <h4><i class="bi bi-envelope me-2 text-primary"></i>Mail</h4>
+                <p class="text-white-50 mb-3">Native SMTP implementation with Mailable classes.</p>
+                <a href="/docs/mail" class="btn btn-sm btn-outline-light">
+                    Read Guide <i class="bi bi-arrow-right ms-1"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <h2 class="mt-5">Background Processing & Events</h2>
     <div class="row g-4 mt-2">
         <div class="col-md-6">
             <div style="background: rgba(15, 23, 42, 0.6); border: 1px solid var(--border-color); border-radius: 0.75rem; padding: 1.5rem;">
                 <h4><i class="bi bi-hourglass-split me-2 text-primary"></i>Queue & Jobs</h4>
                 <p class="text-white-50 mb-3">Enterprise-grade job scheduling with ORM, Clock integration, and UUID support.</p>
                 <a href="/docs/queue-jobs" class="btn btn-sm btn-outline-light">
+                    Read Guide <i class="bi bi-arrow-right ms-1"></i>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div style="background: rgba(15, 23, 42, 0.6); border: 1px solid var(--border-color); border-radius: 0.75rem; padding: 1.5rem;">
+                <h4><i class="bi bi-broadcast me-2 text-primary"></i>Events (PSR-14)</h4>
+                <p class="text-white-50 mb-3">Event dispatcher with listener priority and stoppable propagation.</p>
+                <a href="/docs/events" class="btn btn-sm btn-outline-light">
+                    Read Guide <i class="bi bi-arrow-right ms-1"></i>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div style="background: rgba(15, 23, 42, 0.6); border: 1px solid var(--border-color); border-radius: 0.75rem; padding: 1.5rem;">
+                <h4><i class="bi bi-lightning-charge me-2 text-primary"></i>Cache (PSR-6)</h4>
+                <p class="text-white-50 mb-3">Multi-backend caching with Redis, Memcached, and file storage.</p>
+                <a href="/docs/cache" class="btn btn-sm btn-outline-light">
+                    Read Guide <i class="bi bi-arrow-right ms-1"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <h2 class="mt-5">Real-Time & AI</h2>
+    <div class="row g-4 mt-2">
+        <div class="col-md-6">
+            <div style="background: rgba(15, 23, 42, 0.6); border: 1px solid var(--border-color); border-radius: 0.75rem; padding: 1.5rem;">
+                <h4><i class="bi bi-wifi me-2 text-primary"></i>WebSockets</h4>
+                <p class="text-white-50 mb-3">Real-time bidirectional communication with PHP 8.5 Fibers or ReactPHP.</p>
+                <a href="/docs/websockets" class="btn btn-sm btn-outline-light">
+                    Read Guide <i class="bi bi-arrow-right ms-1"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <h2 class="mt-5">Developer Tools</h2>
+    <div class="row g-4 mt-2">
+        <div class="col-md-6">
+            <div style="background: rgba(15, 23, 42, 0.6); border: 1px solid var(--border-color); border-radius: 0.75rem; padding: 1.5rem;">
+                <h4><i class="bi bi-speedometer2 me-2 text-primary"></i>Debug Toolbar</h4>
+                <p class="text-white-50 mb-3">Query monitoring, N+1 detection, and performance metrics.</p>
+                <a href="/docs/debugbar" class="btn btn-sm btn-outline-light">
+                    Read Guide <i class="bi bi-arrow-right ms-1"></i>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div style="background: rgba(15, 23, 42, 0.6); border: 1px solid var(--border-color); border-radius: 0.75rem; padding: 1.5rem;">
+                <h4><i class="bi bi-bug me-2 text-primary"></i>Error Handling</h4>
+                <p class="text-white-50 mb-3">Beautiful debug views for web and interactive REPL debugging in console.</p>
+                <a href="/docs/error-handling-web" class="btn btn-sm btn-outline-light">
+                    Read Guide <i class="bi bi-arrow-right ms-1"></i>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div style="background: rgba(15, 23, 42, 0.6); border: 1px solid var(--border-color); border-radius: 0.75rem; padding: 1.5rem;">
+                <h4><i class="bi bi-terminal me-2 text-primary"></i>Console Debugging</h4>
+                <p class="text-white-50 mb-3">Interactive REPL-like debugging in terminal with variable inspection.</p>
+                <a href="/docs/console-debugging" class="btn btn-sm btn-outline-light">
+                    Read Guide <i class="bi bi-arrow-right ms-1"></i>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div style="background: rgba(15, 23, 42, 0.6); border: 1px solid var(--border-color); border-radius: 0.75rem; padding: 1.5rem;">
+                <h4><i class="bi bi-window-stack me-2 text-primary"></i>Inertia.js Support</h4>
+                <p class="text-white-50 mb-3">Build modern SPAs with Vue.js using server-side routing.</p>
+                <a href="/docs/inertia" class="btn btn-sm btn-outline-light">
+                    Read Guide <i class="bi bi-arrow-right ms-1"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <h2 class="mt-5">Bridges</h2>
+    <div class="row g-4 mt-2">
+        <div class="col-md-6">
+            <div style="background: rgba(15, 23, 42, 0.6); border: 1px solid var(--border-color); border-radius: 0.75rem; padding: 1.5rem;">
+                <h4><i class="bi bi-plug me-2 text-primary"></i>Bridge Packages</h4>
+                <p class="text-white-50 mb-3">Integrate Carbon, Monolog, Guzzle, Twig, Smarty, and more with one command.</p>
+                <a href="/docs/bridges" class="btn btn-sm btn-outline-light">
                     Read Guide <i class="bi bi-arrow-right ms-1"></i>
                 </a>
             </div>
