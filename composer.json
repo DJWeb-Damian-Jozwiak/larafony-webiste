@@ -6,7 +6,8 @@
     "require": {
         "php": ">=8.5",
         "larafony/core": "^2.0.0",
-        "larafony/mcp-assistant": "^1.0"
+        "larafony/mcp-assistant": "^1.0",
+        "league/commonmark": "^2.5"
     },
     "autoload": {
         "psr-4": {
