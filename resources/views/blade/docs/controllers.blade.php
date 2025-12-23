@@ -396,6 +396,143 @@ return $this->redirect('/notes');
 // Redirect with status code
 return $this->redirect('/login', 302);</code></pre>
 
+    <h2>URL Generation</h2>
+    <p>
+        Generate URLs from named routes using the <code>UrlGenerator</code> class. This approach is preferred over
+        hardcoding URLs because it automatically handles route changes and parameter substitution.
+    </p>
+
+    <h3>Named Routes</h3>
+    <p>
+        First, add names to your routes using the <code>name</code> parameter:
+    </p>
+
+    <pre class="line-numbers"><code class="language-php">use Larafony\Framework\Routing\Advanced\Attributes\Route;
+
+class NoteController extends Controller
+{
+    #[Route('/notes', 'GET', name: 'notes.index')]
+    public function index(): ResponseInterface { /* ... */ }
+
+    #[Route('/notes/&lt;id:\d+&gt;', 'GET', name: 'notes.show')]
+    public function show(int $id): ResponseInterface { /* ... */ }
+
+    #[Route('/notes/&lt;id:\d+&gt;/edit', 'GET', name: 'notes.edit')]
+    public function edit(int $id): ResponseInterface { /* ... */ }
+}</code></pre>
+
+    <h3>Using UrlGenerator</h3>
+    <p>
+        Inject the <code>UrlGenerator</code> via dependency injection and generate URLs:
+    </p>
+
+    <pre class="line-numbers"><code class="language-php">use Larafony\Framework\Routing\Advanced\UrlGenerator;
+use Larafony\Framework\Routing\Advanced\Attributes\Route;
+
+class NoteController extends Controller
+{
+    public function __construct(
+        private readonly UrlGenerator $urlGenerator,
+    ) {}
+
+    #[Route('/notes', 'POST', name: 'notes.store')]
+    public function store(CreateNoteDto $dto): ResponseInterface
+    {
+        $note = new Note()->fill($dto->toArray());
+        $note->save();
+
+        // Generate URL from named route with parameters
+        $url = $this->urlGenerator->route('notes.show', ['id' => $note->id]);
+        // Result: /notes/123
+
+        return $this->redirect($url);
+    }
+}</code></pre>
+
+    <h3>Absolute URLs</h3>
+    <p>
+        Generate absolute URLs (including domain) for emails, external links, or API responses:
+    </p>
+
+    <pre class="line-numbers"><code class="language-php">// Relative URL (default)
+$url = $this->urlGenerator->route('notes.show', ['id' => 42]);
+// Result: /notes/42
+
+// Absolute URL
+$url = $this->urlGenerator->route('notes.show', ['id' => 42], absolute: true);
+// Result: https://example.com/notes/42
+
+// Shorthand method for absolute URLs
+$url = $this->urlGenerator->routeAbsolute('notes.show', ['id' => 42]);
+// Result: https://example.com/notes/42</code></pre>
+
+    <div class="alert-docs alert-info">
+        <i class="bi bi-info-circle-fill me-2"></i>
+        <strong>Configuration:</strong> The base URL for absolute URLs is read from <code>config/app.php</code>
+        under the <code>url</code> key. Set this to your application's domain.
+    </div>
+
+    <h3>Query String Parameters</h3>
+    <p>
+        Extra parameters that don't match route placeholders become query string parameters:
+    </p>
+
+    <pre class="line-numbers"><code class="language-php">$url = $this->urlGenerator->route('notes.index', [
+    'page' => 2,
+    'sort' => 'created_at',
+    'order' => 'desc',
+]);
+// Result: /notes?page=2&sort=created_at&order=desc</code></pre>
+
+    <h3>Using Router::generate()</h3>
+    <p>
+        Alternatively, use the <code>Router::generate()</code> method directly:
+    </p>
+
+    <pre class="line-numbers"><code class="language-php">use Larafony\Framework\Routing\Advanced\Router;
+
+class NoteController extends Controller
+{
+    public function __construct(
+        private readonly Router $router,
+    ) {}
+
+    #[Route('/notes/&lt;id:\d+&gt;/duplicate', 'POST')]
+    public function duplicate(int $id): ResponseInterface
+    {
+        $original = Note::query()->find($id);
+        $copy = $original->replicate()->save();
+
+        $url = $this->router->generate('notes.edit', ['id' => $copy->id]);
+
+        return $this->redirect($url);
+    }
+}</code></pre>
+
+    <h3>URL Generation in Services</h3>
+    <p>
+        Inject <code>UrlGenerator</code> into services for generating URLs outside controllers:
+    </p>
+
+    <pre class="line-numbers"><code class="language-php">use Larafony\Framework\Routing\Advanced\UrlGenerator;
+
+class NotificationService
+{
+    public function __construct(
+        private readonly UrlGenerator $urlGenerator,
+        private readonly MailerContract $mailer,
+    ) {}
+
+    public function sendNoteSharedNotification(Note $note, User $recipient): void
+    {
+        $viewUrl = $this->urlGenerator->routeAbsolute('notes.show', [
+            'id' => $note->id,
+        ]);
+
+        $this->mailer->send(new NoteSharedMail($note, $recipient, $viewUrl));
+    }
+}</code></pre>
+
     <h2>Complete CRUD Example</h2>
     <p>
         Here's a complete RESTful controller for managing notes:

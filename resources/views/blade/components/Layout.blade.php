@@ -201,6 +201,43 @@
             backdrop-filter: blur(10px);
             border-bottom: 1px solid var(--border-color);
         }
+
+        /* Search trigger button */
+        .search-trigger {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 14px;
+            background: rgba(99, 102, 241, 0.1);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            color: #94a3b8;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 0.9rem;
+            font-family: inherit;
+        }
+
+        .search-trigger:hover {
+            background: rgba(99, 102, 241, 0.2);
+            border-color: var(--primary-color);
+            color: #e2e8f0;
+        }
+
+        .search-trigger kbd {
+            background: var(--border-color);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            border: 1px solid #475569;
+            font-family: inherit;
+        }
+
+        @media (max-width: 768px) {
+            .search-trigger kbd {
+                display: none;
+            }
+        }
     </style>
 </head>
 <body>
@@ -213,6 +250,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+
+    <!-- MiniSearch for documentation search -->
+    <script src="https://cdn.jsdelivr.net/npm/minisearch@7.1.1/dist/umd/index.min.js"></script>
+    <script src="/js/docs-search.js"></script>
 
     <!-- Smooth scroll animations -->
     <script>

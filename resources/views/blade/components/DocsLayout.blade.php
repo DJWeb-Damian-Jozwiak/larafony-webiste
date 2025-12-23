@@ -279,6 +279,37 @@
             text-decoration: underline;
         }
 
+        /* Search trigger button */
+        .search-trigger {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 12px;
+            background: rgba(99, 102, 241, 0.1);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            color: #94a3b8;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 0.85rem;
+            font-family: inherit;
+        }
+
+        .search-trigger:hover {
+            background: rgba(99, 102, 241, 0.2);
+            border-color: var(--primary-color);
+            color: #e2e8f0;
+        }
+
+        .search-trigger kbd {
+            background: var(--border-color);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            border: 1px solid #475569;
+            font-family: inherit;
+        }
+
         /* Mobile responsive */
         @media (max-width: 768px) {
             .docs-sidebar {
@@ -288,6 +319,10 @@
             .docs-content,
             .docs-footer {
                 margin-left: 0;
+            }
+
+            .search-trigger kbd {
+                display: none;
             }
         }
 
@@ -320,15 +355,20 @@
                     <span class="text-white fw-bold">Larafony</span>
                     <span class="text-muted ms-2">/ Documentation</span>
                 </a>
-                <div>
-                    <a href="/" class="btn btn-sm btn-outline-light me-2">
-                        <i class="bi bi-house"></i> Home
+                <div class="d-flex align-items-center gap-2">
+                    <button type="button" class="search-trigger" onclick="openDocsSearch()">
+                        <i class="bi bi-search"></i>
+                        <span class="d-none d-md-inline">Search</span>
+                        <kbd>Ctrl+F</kbd>
+                    </button>
+                    <a href="/" class="btn btn-sm btn-outline-light">
+                        <i class="bi bi-house"></i><span class="d-none d-lg-inline"> Home</span>
                     </a>
-                    <a href="https://github.com/DJWeb-Damian-Jozwiak/larafony" target="_blank" class="btn btn-sm btn-outline-light me-2">
-                        <i class="bi bi-github"></i> Framework
+                    <a href="https://github.com/DJWeb-Damian-Jozwiak/larafony" target="_blank" class="btn btn-sm btn-outline-light">
+                        <i class="bi bi-github"></i><span class="d-none d-lg-inline"> Framework</span>
                     </a>
                     <a href="https://github.com/DJWeb-Damian-Jozwiak/larafony-demo-app" target="_blank" class="btn btn-sm btn-outline-light">
-                        <i class="bi bi-code-square"></i> Demo
+                        <i class="bi bi-code-square"></i><span class="d-none d-lg-inline"> Demo</span>
                     </a>
                 </div>
             </div>
@@ -508,8 +548,35 @@
                     <i class="bi bi-chevron-right me-1 collapse-icon"></i>Bridges
                 </div>
                 <div id="nav-bridges" class="collapse">
-                    <a href="/docs/bridges" class="nav-link">
-                        <i class="bi bi-plug me-2"></i>Bridge Packages
+                    <a href="/bridges" class="nav-link">
+                        <i class="bi bi-plug me-2"></i>Overview
+                    </a>
+                    <a href="/bridges/guzzle" class="nav-link">
+                        <i class="bi bi-arrow-left-right me-2"></i>Guzzle HTTP
+                    </a>
+                    <a href="/bridges/monolog" class="nav-link">
+                        <i class="bi bi-journal-code me-2"></i>Monolog
+                    </a>
+                    <a href="/bridges/symfony-mailer" class="nav-link">
+                        <i class="bi bi-envelope me-2"></i>Symfony Mailer
+                    </a>
+                    <a href="/bridges/flysystem" class="nav-link">
+                        <i class="bi bi-folder me-2"></i>Flysystem
+                    </a>
+                    <a href="/bridges/carbon" class="nav-link">
+                        <i class="bi bi-clock me-2"></i>Carbon Clock
+                    </a>
+                    <a href="/bridges/phpdotenv" class="nav-link">
+                        <i class="bi bi-file-earmark-text me-2"></i>PHP dotenv
+                    </a>
+                    <a href="/bridges/twig" class="nav-link">
+                        <i class="bi bi-filetype-html me-2"></i>Twig
+                    </a>
+                    <a href="/bridges/smarty" class="nav-link">
+                        <i class="bi bi-filetype-html me-2"></i>Smarty
+                    </a>
+                    <a href="/bridges/debugbar" class="nav-link">
+                        <i class="bi bi-bug me-2"></i>PHP DebugBar
                     </a>
                 </div>
             </div>
@@ -566,6 +633,10 @@
 
     <!-- Analytics Tracker (Beacon API) -->
     <script src="/js/analytics.js"></script>
+
+    <!-- MiniSearch for documentation search -->
+    <script src="https://cdn.jsdelivr.net/npm/minisearch@7.1.1/dist/umd/index.min.js"></script>
+    <script src="/js/docs-search.js"></script>
 
     <!-- Active nav link and auto-expand section -->
     <script>

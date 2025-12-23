@@ -1,4 +1,13 @@
 <x-layout :title="$title" :description="$description">
+    <!-- Floating Search Button -->
+    <div style="position: fixed; top: 20px; right: 20px; z-index: 1000;">
+        <button type="button" class="search-trigger" onclick="openDocsSearch()">
+            <i class="bi bi-search"></i>
+            <span class="d-none d-sm-inline">Search Docs</span>
+            <kbd>Ctrl+F</kbd>
+        </button>
+    </div>
+
     <!-- Hero Section -->
     <section class="hero-section">
         <div class="container">
@@ -17,6 +26,9 @@
                         </a>
                         <a href="/docs" class="btn btn-outline-light btn-lg">
                             <i class="bi bi-book me-2"></i>Documentation
+                        </a>
+                        <a href="/bridges" class="btn btn-outline-light btn-lg">
+                            <i class="bi bi-plug me-2"></i>Bridges
                         </a>
                         <a href="https://github.com/DJWeb-Damian-Jozwiak/larafony" target="_blank" class="btn btn-outline-light btn-lg">
                             <i class="bi bi-github me-2"></i>Framework

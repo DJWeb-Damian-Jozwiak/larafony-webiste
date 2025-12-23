@@ -199,4 +199,66 @@
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
+
+    <!-- Bridge Pages -->
+    <url>
+        <loc>https://larafony.com/bridges</loc>
+        <lastmod>2025-12-23</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://larafony.com/bridges/guzzle</loc>
+        <lastmod>2025-12-23</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://larafony.com/bridges/monolog</loc>
+        <lastmod>2025-12-23</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://larafony.com/bridges/symfony-mailer</loc>
+        <lastmod>2025-12-23</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://larafony.com/bridges/flysystem</loc>
+        <lastmod>2025-12-23</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://larafony.com/bridges/carbon</loc>
+        <lastmod>2025-12-23</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://larafony.com/bridges/phpdotenv</loc>
+        <lastmod>2025-12-23</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://larafony.com/bridges/twig</loc>
+        <lastmod>2025-12-23</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://larafony.com/bridges/smarty</loc>
+        <lastmod>2025-12-23</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://larafony.com/bridges/debugbar</loc>
+        <lastmod>2025-12-23</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
 </urlset>
