@@ -36,6 +36,9 @@
                         <a href="https://github.com/DJWeb-Damian-Jozwiak/larafony-demo-app" target="_blank" class="btn btn-outline-light btn-lg">
                             <i class="bi bi-github me-2"></i>Demo App
                         </a>
+                        <button type="button" class="btn btn-gradient-alt btn-lg" data-bs-toggle="modal" data-bs-target="#mcpModal">
+                            <i class="bi bi-robot me-2"></i>AI Assistant
+                        </button>
                     </div>
                 </div>
             </div>
@@ -407,6 +410,157 @@
             </div>
         </div>
     </section>
+
+    <!-- MCP Modal -->
+    <div class="modal fade" id="mcpModal" tabindex="-1" aria-labelledby="mcpModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content mcp-modal-content">
+                <!-- Animated background -->
+                <div class="mcp-modal-glow"></div>
+
+                <div class="modal-header border-0 pb-0">
+                    <div class="w-100 text-center">
+                        <div class="mcp-icon-wrapper">
+                            <i class="bi bi-robot"></i>
+                        </div>
+                        <h2 class="modal-title gradient-text mt-3" id="mcpModalLabel">AI Assistant</h2>
+                        <p class="text-white-50 mb-0">Connect your AI coding assistant to Larafony</p>
+                    </div>
+                    <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body pt-4">
+                    <!-- Server URL Banner -->
+                    <div class="mcp-server-url">
+                        <div class="d-flex align-items-center justify-content-between flex-wrap gap-2">
+                            <div>
+                                <i class="bi bi-lightning-charge-fill text-warning me-2"></i>
+                                <span class="text-white-50">Public MCP Server:</span>
+                            </div>
+                            <div class="d-flex align-items-center gap-2">
+                                <code class="mcp-url">https://larafony.com/mcp</code>
+                                <button class="btn btn-sm btn-outline-light copy-btn" onclick="copyMcpUrl()" title="Copy URL">
+                                    <i class="bi bi-clipboard"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tabs Navigation -->
+                    <ul class="nav nav-pills nav-justified mb-4 mcp-tabs" id="mcpTabs" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="claude-desktop-tab" data-bs-toggle="tab" data-bs-target="#claude-desktop" type="button" role="tab">
+                                <i class="bi bi-window-desktop"></i>
+                                <span>Claude Desktop</span>
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="cursor-tab" data-bs-toggle="tab" data-bs-target="#cursor" type="button" role="tab">
+                                <i class="bi bi-cursor"></i>
+                                <span>Cursor</span>
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="claude-code-tab" data-bs-toggle="tab" data-bs-target="#claude-code" type="button" role="tab">
+                                <i class="bi bi-terminal"></i>
+                                <span>Claude Code</span>
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="codex-tab" data-bs-toggle="tab" data-bs-target="#codex" type="button" role="tab">
+                                <i class="bi bi-braces"></i>
+                                <span>Codex</span>
+                            </button>
+                        </li>
+                    </ul>
+
+                    <!-- Tabs Content -->
+                    <div class="tab-content mcp-tab-content" id="mcpTabsContent">
+                        <!-- Claude Desktop -->
+                        <div class="tab-pane fade show active" id="claude-desktop" role="tabpanel">
+                            <p class="text-white-50 small mb-2">
+                                <i class="bi bi-folder2-open me-1"></i>
+                                <strong>macOS:</strong> <code>~/Library/Application Support/Claude/claude_desktop_config.json</code><br>
+                                <i class="bi bi-folder2-open me-1"></i>
+                                <strong>Windows:</strong> <code>%APPDATA%\Claude\claude_desktop_config.json</code>
+                            </p>
+                            <pre><code class="language-json">{
+  "mcpServers": {
+    "larafony": {
+      "url": "https://larafony.com/mcp"
+    }
+  }
+}</code></pre>
+                        </div>
+
+                        <!-- Cursor IDE -->
+                        <div class="tab-pane fade" id="cursor" role="tabpanel">
+                            <p class="text-white-50 small mb-2">
+                                <i class="bi bi-gear me-1"></i>
+                                <kbd>Ctrl+Shift+P</kbd> → "Cursor Settings" → MCP, or edit <code>~/.cursor/mcp.json</code>
+                            </p>
+                            <pre><code class="language-json">{
+  "mcpServers": {
+    "larafony": {
+      "url": "https://larafony.com/mcp"
+    }
+  }
+}</code></pre>
+                        </div>
+
+                        <!-- Claude Code CLI -->
+                        <div class="tab-pane fade" id="claude-code" role="tabpanel">
+                            <p class="text-white-50 small mb-2">
+                                <i class="bi bi-terminal me-1"></i>
+                                Run this command to add the server globally:
+                            </p>
+                            <pre><code class="language-bash">claude mcp add larafony --url https://larafony.com/mcp --scope user</code></pre>
+                            <p class="text-white-50 small mt-2 mb-0">
+                                <i class="bi bi-info-circle me-1"></i>
+                                Scope options: <code>--scope local</code> (project), <code>--scope user</code> (global)
+                            </p>
+                        </div>
+
+                        <!-- OpenAI Codex -->
+                        <div class="tab-pane fade" id="codex" role="tabpanel">
+                            <p class="text-white-50 small mb-2">
+                                <i class="bi bi-file-earmark-code me-1"></i>
+                                Edit <code>~/.codex/config.toml</code>:
+                            </p>
+                            <pre><code class="language-toml">[mcp.larafony]
+url = "https://larafony.com/mcp"</code></pre>
+                            <p class="text-white-50 small mt-2 mb-0">
+                                <i class="bi bi-terminal me-1"></i>
+                                Or via CLI: <code>codex mcp add larafony --url https://larafony.com/mcp</code>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Features Pills -->
+                    <div class="mcp-features">
+                        <div class="mcp-feature-pill">
+                            <i class="bi bi-book-half"></i>
+                            <span>36 Docs</span>
+                        </div>
+                        <div class="mcp-feature-pill">
+                            <i class="bi bi-mortarboard"></i>
+                            <span>Learning Prompts</span>
+                        </div>
+                        <div class="mcp-feature-pill">
+                            <i class="bi bi-bug"></i>
+                            <span>Debug Helpers</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer border-0 justify-content-center pt-0">
+                    <a href="https://github.com/DJWeb-Damian-Jozwiak/larafony-mcp-assistant" target="_blank" class="btn btn-outline-light">
+                        <i class="bi bi-github me-2"></i>View on GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Philosophy Section -->
     <section id="philosophy" class="py-5">

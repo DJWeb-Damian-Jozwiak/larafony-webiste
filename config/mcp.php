@@ -20,7 +20,13 @@ TEXT,
 
     'discovery' => [
         'path' => dirname(__DIR__),
-        'dirs' => ['src'],
+        'dirs' => [
+            'src',
+            // Only load Resources and Prompts for larafony.com (docs site)
+            // Tools are for local development, not remote MCP servers
+            'vendor/larafony/mcp-assistant/src/Resources',
+            'vendor/larafony/mcp-assistant/src/Prompts',
+        ],
     ],
 
     // Disable course hints for larafony.com (we ARE the course!)

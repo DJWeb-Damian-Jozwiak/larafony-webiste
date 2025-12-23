@@ -90,6 +90,23 @@
             color: white;
         }
 
+        .btn-gradient-alt {
+            background: linear-gradient(135deg, #10b981 0%, #06b6d4 100%);
+            border: none;
+            color: white;
+            font-weight: 600;
+            padding: 0.875rem 2rem;
+            border-radius: 0.5rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4);
+        }
+
+        .btn-gradient-alt:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(16, 185, 129, 0.6);
+            color: white;
+        }
+
         .feature-card {
             background: rgba(15, 23, 42, 0.6);
             border: 1px solid var(--border-color);
@@ -238,6 +255,198 @@
                 display: none;
             }
         }
+
+        /* MCP Modal Styling */
+        .mcp-modal-content {
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%);
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            border-radius: 1.5rem;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 25px 80px rgba(99, 102, 241, 0.4), 0 0 60px rgba(139, 92, 246, 0.2);
+        }
+
+        .mcp-modal-glow {
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at 30% 30%, rgba(99, 102, 241, 0.15) 0%, transparent 50%),
+                        radial-gradient(circle at 70% 70%, rgba(236, 72, 153, 0.1) 0%, transparent 50%);
+            animation: glowRotate 10s linear infinite;
+            pointer-events: none;
+        }
+
+        @keyframes glowRotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .mcp-icon-wrapper {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            color: white;
+            box-shadow: 0 10px 40px rgba(99, 102, 241, 0.5);
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 10px 40px rgba(99, 102, 241, 0.5); }
+            50% { box-shadow: 0 10px 60px rgba(99, 102, 241, 0.8), 0 0 30px rgba(236, 72, 153, 0.4); }
+        }
+
+        .mcp-server-url {
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            border-radius: 0.75rem;
+            padding: 1rem 1.25rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .mcp-url {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            color: #10b981;
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+
+        .copy-btn {
+            padding: 0.35rem 0.6rem;
+            border-radius: 0.4rem;
+        }
+
+        .copy-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        /* MCP Pills Tabs */
+        .mcp-tabs {
+            gap: 0.5rem;
+            background: rgba(0, 0, 0, 0.2);
+            padding: 0.5rem;
+            border-radius: 1rem;
+        }
+
+        .mcp-tabs .nav-link {
+            background: transparent;
+            border: none;
+            color: var(--text-muted);
+            padding: 0.75rem 1rem;
+            border-radius: 0.75rem;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        .mcp-tabs .nav-link i {
+            font-size: 1.25rem;
+        }
+
+        .mcp-tabs .nav-link span {
+            font-size: 0.75rem;
+        }
+
+        .mcp-tabs .nav-link:hover {
+            color: #e2e8f0;
+            background: rgba(99, 102, 241, 0.15);
+        }
+
+        .mcp-tabs .nav-link.active {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+            color: white;
+            box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
+        }
+
+        .mcp-tab-content {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            min-height: 180px;
+        }
+
+        .mcp-tab-content pre {
+            margin: 0.75rem 0 0;
+            border-radius: 0.75rem;
+            background: #1a1a2e !important;
+            border: 1px solid rgba(99, 102, 241, 0.2);
+        }
+
+        .mcp-tab-content code {
+            font-size: 0.85rem;
+        }
+
+        /* Feature Pills */
+        .mcp-features {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .mcp-feature-pill {
+            background: rgba(99, 102, 241, 0.1);
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #cbd5e1;
+            font-size: 0.85rem;
+            transition: all 0.3s ease;
+        }
+
+        .mcp-feature-pill:hover {
+            background: rgba(99, 102, 241, 0.2);
+            border-color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+
+        .mcp-feature-pill i {
+            color: var(--primary-color);
+        }
+
+        /* Modal backdrop */
+        #mcpModal .modal-backdrop {
+            backdrop-filter: blur(8px);
+        }
+
+        @media (max-width: 768px) {
+            .mcp-tabs .nav-link {
+                padding: 0.5rem 0.75rem;
+            }
+            .mcp-tabs .nav-link span {
+                display: none;
+            }
+            .mcp-tabs .nav-link i {
+                font-size: 1.5rem;
+            }
+            .mcp-server-url {
+                text-align: center;
+            }
+            .mcp-server-url .d-flex {
+                flex-direction: column;
+            }
+            .mcp-icon-wrapper {
+                width: 60px;
+                height: 60px;
+                font-size: 1.75rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -270,7 +479,42 @@
             document.querySelectorAll('section').forEach(section => {
                 observer.observe(section);
             });
+
+            // Re-highlight code when MCP tabs are switched
+            const mcpTabs = document.getElementById('mcpTabs');
+            if (mcpTabs) {
+                mcpTabs.addEventListener('shown.bs.tab', function(e) {
+                    Prism.highlightAll();
+                });
+            }
+
+            // Re-highlight code when modal is shown
+            const mcpModal = document.getElementById('mcpModal');
+            if (mcpModal) {
+                mcpModal.addEventListener('shown.bs.modal', function(e) {
+                    Prism.highlightAll();
+                });
+            }
         });
+
+        // Copy MCP URL function
+        function copyMcpUrl() {
+            const url = 'https://larafony.com/mcp';
+            navigator.clipboard.writeText(url).then(() => {
+                const btn = document.querySelector('.copy-btn');
+                const icon = btn.querySelector('i');
+                icon.classList.remove('bi-clipboard');
+                icon.classList.add('bi-check-lg');
+                btn.classList.add('btn-success');
+                btn.classList.remove('btn-outline-light');
+                setTimeout(() => {
+                    icon.classList.remove('bi-check-lg');
+                    icon.classList.add('bi-clipboard');
+                    btn.classList.remove('btn-success');
+                    btn.classList.add('btn-outline-light');
+                }, 2000);
+            });
+        }
     </script>
 </body>
 </html>
