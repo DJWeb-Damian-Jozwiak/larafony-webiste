@@ -322,81 +322,151 @@
         <div class="container">
             <div class="text-center mb-5">
                 <h2 class="section-title gradient-text">Getting Started</h2>
-                <p class="section-subtitle">Up and running in seconds</p>
+                <p class="section-subtitle">Choose your starting point</p>
             </div>
 
             <div class="row justify-content-center">
                 <div class="col-lg-8">
-                    <div class="mb-4">
-                        <h4 class="text-white mb-3">
-                            <i class="bi bi-1-circle-fill text-primary me-2"></i>
-                            Create a new project
-                        </h4>
-                        <pre class="line-numbers"><code class="language-bash">composer create-project larafony/skeleton my-app</code></pre>
-                    </div>
+                    <!-- Tabs Navigation -->
+                    <ul class="nav nav-pills nav-justified mb-4" id="starterTabs" role="tablist" style="background: rgba(255,255,255,0.05); border-radius: 12px; padding: 8px;">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="minimal-tab" data-bs-toggle="tab" data-bs-target="#minimal" type="button" role="tab" style="border-radius: 8px;">
+                                <i class="bi bi-feather me-2"></i>Minimal App
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="fullfeature-tab" data-bs-toggle="tab" data-bs-target="#fullfeature" type="button" role="tab" style="border-radius: 8px;">
+                                <i class="bi bi-rocket-takeoff me-2"></i>Full-feature Demo
+                            </button>
+                        </li>
+                    </ul>
 
-                    <div class="mb-4">
-                        <h4 class="text-white mb-3">
-                            <i class="bi bi-2-circle-fill text-primary me-2"></i>
-                            Navigate to your project
-                        </h4>
-                        <pre class="line-numbers"><code class="language-bash">cd my-app</code></pre>
-                    </div>
+                    <!-- Tabs Content -->
+                    <div class="tab-content" id="starterTabsContent">
+                        <!-- Minimal App Tab -->
+                        <div class="tab-pane fade show active" id="minimal" role="tabpanel">
+                            <div class="alert border-0 mb-4" style="background: rgba(99, 102, 241, 0.15); color: #cbd5e1;">
+                                <i class="bi bi-info-circle-fill me-2"></i>
+                                <strong>Perfect for:</strong> Starting from scratch, learning the basics, or building your own structure.
+                            </div>
 
-                    <div class="mb-4">
-                        <h4 class="text-white mb-3">
-                            <i class="bi bi-3-circle-fill text-primary me-2"></i>
-                            Install frontend dependencies (Inertia.js + Vue)
-                        </h4>
-                        <pre class="line-numbers"><code class="language-bash">npm install</code></pre>
-                    </div>
+                            <div class="mb-4">
+                                <h4 class="text-white mb-3">
+                                    <i class="bi bi-1-circle-fill text-primary me-2"></i>
+                                    Create a new project
+                                </h4>
+                                <pre class="line-numbers"><code class="language-bash">composer create-project larafony/empty-project my-app</code></pre>
+                            </div>
 
-                    <div class="mb-4">
-                        <h4 class="text-white mb-3">
-                            <i class="bi bi-4-circle-fill text-primary me-2"></i>
-                            Build frontend assets
-                        </h4>
-                        <pre class="line-numbers"><code class="language-bash">npm run build</code></pre>
-                    </div>
+                            <div class="mb-4">
+                                <h4 class="text-white mb-3">
+                                    <i class="bi bi-2-circle-fill text-primary me-2"></i>
+                                    Navigate to your project
+                                </h4>
+                                <pre class="line-numbers"><code class="language-bash">cd my-app</code></pre>
+                            </div>
 
-                    <div class="mb-4">
-                        <h4 class="text-white mb-3">
-                            <i class="bi bi-5-circle-fill text-primary me-2"></i>
-                            Run the installer (database setup + demo data)
-                        </h4>
-                        <pre class="line-numbers"><code class="language-bash">php bin/larafony build:notes</code></pre>
-                    </div>
+                            <div class="mb-4">
+                                <h4 class="text-white mb-3">
+                                    <i class="bi bi-3-circle-fill text-primary me-2"></i>
+                                    Start the development server
+                                </h4>
+                                <pre class="line-numbers"><code class="language-bash">composer serve</code></pre>
+                            </div>
 
-                    <div class="mb-4">
-                        <h4 class="text-white mb-3">
-                            <i class="bi bi-6-circle-fill text-primary me-2"></i>
-                            Start the development server
-                        </h4>
-                        <pre class="line-numbers"><code class="language-bash">php8.5 -S localhost:8000 -t public</code></pre>
-                    </div>
+                            <div class="alert alert-success border-0 mt-4" style="background: rgba(34, 197, 94, 0.15); color: #cbd5e1;">
+                                <i class="bi bi-rocket-takeoff-fill me-2"></i>
+                                <strong>Done!</strong> Visit <a href="http://localhost:8000" target="_blank" class="text-white fw-bold">localhost:8000</a> to see the welcome page. Start building!
+                            </div>
 
-                    <div class="alert alert-success border-0 mt-4" style="background: rgba(34, 197, 94, 0.15); color: #cbd5e1;">
-                        <i class="bi bi-rocket-takeoff-fill me-2"></i>
-                        <strong>Done!</strong> Visit <a href="http://localhost:8000/notes" target="_blank" class="text-white fw-bold">localhost:8000/notes</a> to see the demo app with Blade templates and <a href="http://localhost:8000/inertia/notes" target="_blank" class="text-white fw-bold">localhost:8000/inertia/notes</a> for the Inertia.js version.
-                    </div>
+                            <div class="alert border-0 mt-3" style="background: rgba(255,255,255,0.05); color: #cbd5e1;">
+                                <i class="bi bi-box-seam me-2"></i>
+                                <strong>What's included:</strong>
+                                <ul class="mb-0 mt-2">
+                                    <li>One simple controller + Blade view</li>
+                                    <li>Layout component ready to use</li>
+                                    <li>Database support (commented out, easy to enable)</li>
+                                    <li>CLAUDE.md for AI-assisted development</li>
+                                </ul>
+                            </div>
+                        </div>
 
-                    <div class="alert alert-warning border-0 mt-3" style="background: rgba(251, 191, 36, 0.15); color: #cbd5e1;">
-                        <i class="bi bi-exclamation-triangle-fill me-2"></i>
-                        <strong>Optional - Redis/Memcached Cache:</strong><br>
-                        As of Nov. 22, 2025, there is no <code class="text-warning">php8.5-memcached</code> packages available.<br><br>
-                        <strong>Temporary solution:</strong> Run <code class="text-warning">./build.sh</code> from project root to compile extensions from source.<br><br>
-                        <strong>For Redis:</strong> Simply run:
-                        <ul class="mb-0 mt-2">
-                            <li><strong>Debian/Ubuntu:</strong> <code class="text-warning">sudo apt install php8.5-redis</code></li>
-                            <li><strong>RHEL/Fedora:</strong> <code class="text-warning">sudo dnf install php-redis</code> (via Remi repository)</li>
-                            <li><strong>Windows:</strong> Use WSL2 with Ubuntu 😎 (or hope XAMPP/WAMPP adds latest PHP with cache drivers)</li>
-                        </ul>
-                        FileStorage cache works out of the box, no setup required.
+                        <!-- Full-feature Demo Tab -->
+                        <div class="tab-pane fade" id="fullfeature" role="tabpanel">
+                            <div class="alert border-0 mb-4" style="background: rgba(99, 102, 241, 0.15); color: #cbd5e1;">
+                                <i class="bi bi-info-circle-fill me-2"></i>
+                                <strong>Perfect for:</strong> Exploring all features, learning best practices, or using as a reference.
+                            </div>
+
+                            <div class="mb-4">
+                                <h4 class="text-white mb-3">
+                                    <i class="bi bi-1-circle-fill text-primary me-2"></i>
+                                    Create a new project
+                                </h4>
+                                <pre class="line-numbers"><code class="language-bash">composer create-project larafony/skeleton my-app</code></pre>
+                            </div>
+
+                            <div class="mb-4">
+                                <h4 class="text-white mb-3">
+                                    <i class="bi bi-2-circle-fill text-primary me-2"></i>
+                                    Navigate to your project
+                                </h4>
+                                <pre class="line-numbers"><code class="language-bash">cd my-app</code></pre>
+                            </div>
+
+                            <div class="mb-4">
+                                <h4 class="text-white mb-3">
+                                    <i class="bi bi-3-circle-fill text-primary me-2"></i>
+                                    Install frontend dependencies (Inertia.js + Vue)
+                                </h4>
+                                <pre class="line-numbers"><code class="language-bash">npm install</code></pre>
+                            </div>
+
+                            <div class="mb-4">
+                                <h4 class="text-white mb-3">
+                                    <i class="bi bi-4-circle-fill text-primary me-2"></i>
+                                    Build frontend assets
+                                </h4>
+                                <pre class="line-numbers"><code class="language-bash">npm run build</code></pre>
+                            </div>
+
+                            <div class="mb-4">
+                                <h4 class="text-white mb-3">
+                                    <i class="bi bi-5-circle-fill text-primary me-2"></i>
+                                    Run the installer (database setup + demo data)
+                                </h4>
+                                <pre class="line-numbers"><code class="language-bash">php bin/larafony build:notes</code></pre>
+                            </div>
+
+                            <div class="mb-4">
+                                <h4 class="text-white mb-3">
+                                    <i class="bi bi-6-circle-fill text-primary me-2"></i>
+                                    Start the development server
+                                </h4>
+                                <pre class="line-numbers"><code class="language-bash">composer serve</code></pre>
+                            </div>
+
+                            <div class="alert alert-success border-0 mt-4" style="background: rgba(34, 197, 94, 0.15); color: #cbd5e1;">
+                                <i class="bi bi-rocket-takeoff-fill me-2"></i>
+                                <strong>Done!</strong> Visit <a href="http://localhost:8000/notes" target="_blank" class="text-white fw-bold">localhost:8000/notes</a> for Blade templates and <a href="http://localhost:8000/inertia/notes" target="_blank" class="text-white fw-bold">localhost:8000/inertia/notes</a> for Inertia.js.
+                            </div>
+
+                            <div class="alert border-0 mt-3" style="background: rgba(255,255,255,0.05); color: #cbd5e1;">
+                                <i class="bi bi-box-seam me-2"></i>
+                                <strong>What's included:</strong>
+                                <ul class="mb-0 mt-2">
+                                    <li>Full ORM with relationships (belongsTo, hasMany, belongsToMany)</li>
+                                    <li>Blade templates + Inertia.js/Vue examples</li>
+                                    <li>Authentication, sessions, DTOs with validation</li>
+                                    <li>Migrations, seeders, console commands</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="alert alert-info border-0 mt-3" style="background: rgba(99, 102, 241, 0.15); color: #cbd5e1;">
                         <i class="bi bi-info-circle-fill me-2"></i>
-                        <strong>Requirements:</strong> PHP ≥ 8.5, Composer, Node.js ≥ 22, MySQL/PostgreSQL/SQLite
+                        <strong>Requirements:</strong> PHP ≥ 8.5, Composer 2.9+, Node.js ≥ 22 (for full-feature demo), MySQL/PostgreSQL/SQLite
                     </div>
 
                     <div class="alert alert-info border-0 mt-3" style="background: rgba(59, 130, 246, 0.15); color: #cbd5e1;">
@@ -649,6 +719,29 @@ url = "https://larafony.com/mcp"</code></pre>
         </div>
     </section>
 
+    <!-- Record-it Banner -->
+    <section class="py-4" style="background: linear-gradient(135deg, #0ea5e9 0%, #6366f1 100%);">
+        <div class="container">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-lg-8">
+                    <div class="d-flex align-items-center justify-content-between flex-wrap gap-3">
+                        <div>
+                            <h5 class="text-white mb-1">
+                                <i class="bi bi-camera-video me-2"></i>Want to understand your users?
+                            </h5>
+                            <p class="text-white-75 mb-0" style="opacity: 0.9;">
+                                Record user sessions and see exactly how they interact with your app.
+                            </p>
+                        </div>
+                        <a href="https://record-it.eu" target="_blank" class="btn btn-light btn-lg fw-semibold">
+                            Try Record-it <i class="bi bi-arrow-right ms-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer>
         <div class="container">
@@ -665,8 +758,11 @@ url = "https://larafony.com/mcp"</code></pre>
                     <a href="https://github.com/DJWeb-Damian-Jozwiak/larafony-demo-app" target="_blank" class="text-white-50 text-decoration-none me-3" title="Demo App Repository">
                         <i class="bi bi-code-square" style="font-size: 1.5rem;"></i>
                     </a>
-                    <a href="https://masterphp.eu" target="_blank" class="text-white-50 text-decoration-none">
+                    <a href="https://masterphp.eu" target="_blank" class="text-white-50 text-decoration-none me-3">
                         <i class="bi bi-book" style="font-size: 1.5rem;"></i>
+                    </a>
+                    <a href="https://nagraj-to.pl" target="_blank" class="text-white-50 text-decoration-none" title="Session Recording">
+                        <i class="bi bi-camera-video" style="font-size: 1.5rem;"></i>
                     </a>
                 </div>
             </div>
